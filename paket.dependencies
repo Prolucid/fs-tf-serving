@@ -1,0 +1,102 @@
+group Build
+	framework: Net4.6
+	source https://nuget.org/api/v2
+
+	nuget FAKE
+    nuget Google.Protobuf.Tools
+    nuget Grpc.Tools
+	nuget SourceLink.Fake
+	nuget Octokit
+	nuget FSharp.Formatting
+	nuget fsharplint
+	
+	github fsharp/FAKE modules/Octokit/Octokit.fsx
+	
+	github tensorflow/serving tensorflow_serving/apis/classification.proto
+	github tensorflow/serving tensorflow_serving/apis/get_model_metadata.proto
+	github tensorflow/serving tensorflow_serving/apis/inference.proto
+	github tensorflow/serving tensorflow_serving/apis/input.proto
+	github tensorflow/serving tensorflow_serving/apis/model.proto
+	github tensorflow/serving tensorflow_serving/apis/predict.proto
+	github tensorflow/serving tensorflow_serving/apis/prediction_service.proto
+	github tensorflow/serving tensorflow_serving/apis/regression.proto
+	github tensorflow/tensorflow tensorflow/core/example/example.proto
+	github tensorflow/tensorflow tensorflow/core/example/feature.proto
+
+	github tensorflow/tensorflow tensorflow/core/protobuf/cluster.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/config.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/control_flow.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/debug.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/device_properties.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/master.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/master_service.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/meta_graph.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/named_tensor.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/queue_runner.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/rewriter_config.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/saved_model.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/saver.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/tensor_bundle.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/tensorflow_server.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/worker.proto
+	github tensorflow/tensorflow tensorflow/core/protobuf/worker_service.proto
+	
+	github tensorflow/tensorflow tensorflow/core/framework/graph.proto
+	github tensorflow/tensorflow tensorflow/core/framework/allocation_description.proto
+	github tensorflow/tensorflow tensorflow/core/framework/api_def.proto
+	github tensorflow/tensorflow tensorflow/core/framework/attr_value.proto
+	github tensorflow/tensorflow tensorflow/core/framework/cost_graph.proto
+	github tensorflow/tensorflow tensorflow/core/framework/device_attributes.proto
+	github tensorflow/tensorflow tensorflow/core/framework/function.proto
+	github tensorflow/tensorflow tensorflow/core/framework/graph.proto
+	github tensorflow/tensorflow tensorflow/core/framework/graph_transfer_info.proto
+	github tensorflow/tensorflow tensorflow/core/framework/kernel_def.proto
+	github tensorflow/tensorflow tensorflow/core/framework/log_memory.proto
+	github tensorflow/tensorflow tensorflow/core/framework/node_def.proto
+	github tensorflow/tensorflow tensorflow/core/framework/op_def.proto
+	github tensorflow/tensorflow tensorflow/core/framework/op_gen_overrides.proto
+	github tensorflow/tensorflow tensorflow/core/framework/reader_base.proto
+	github tensorflow/tensorflow tensorflow/core/framework/remote_fused_graph_execute_info.proto
+	github tensorflow/tensorflow tensorflow/core/framework/resource_handle.proto
+	github tensorflow/tensorflow tensorflow/core/framework/step_stats.proto
+	github tensorflow/tensorflow tensorflow/core/framework/summary.proto
+	github tensorflow/tensorflow tensorflow/core/framework/tensor.proto
+	github tensorflow/tensorflow tensorflow/core/framework/tensor_description.proto
+	github tensorflow/tensorflow tensorflow/core/framework/tensor_shape.proto
+	github tensorflow/tensorflow tensorflow/core/framework/tensor_slice.proto
+	github tensorflow/tensorflow tensorflow/core/framework/types.proto
+	github tensorflow/tensorflow tensorflow/core/framework/variable.proto
+	github tensorflow/tensorflow tensorflow/core/framework/versions.proto
+	github tensorflow/tensorflow tensorflow/core/lib/core/error_codes.proto
+
+
+group Main
+	storage: none
+	framework: netstandard20
+	source https://nuget.org/api/v2
+
+	nuget FSharp.Core redirects: force
+    nuget Google.Protobuf
+    nuget Grpc
+
+
+group Net4Samples
+	storage: none
+	framework: net462
+	source https://nuget.org/api/v2
+
+	nuget FSharp.Core redirects: force
+    nuget Google.Protobuf
+    nuget Grpc.Core
+    nuget FSharp.Data
+    nuget FSharpx.Extras
+	nuget MathNet.Numerics.FSharp
+
+group Tests
+	storage: none
+	framework: netcore20
+	source https://nuget.org/api/v2
+
+	nuget FSharp.Core redirects: force
+	nuget unquote
+	nuget Expecto

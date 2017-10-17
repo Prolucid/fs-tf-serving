@@ -1,0 +1,6 @@
+group Net4Samples
+FSharp.Core
+Grpc.Core
+FSharp.Data
+FSharpx.Extras
+MathNet.Numerics.FSharp

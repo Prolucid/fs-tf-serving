@@ -1,0 +1,21 @@
+type file
+id FsTfServing
+version 0.0
+authors Prolucid
+description
+    Client API for tensorfow-serving
+tags
+	tensorflow serving fsharp
+projectUrl
+	http://www.github.com/Prolucid/FsTfServing
+licenseUrl
+	http://prolucid.github.io/FsTfServing/LICENSE.html
+requireLicenseAcceptance false
+iconUrl
+	http://prolucid.github.io/FsTfServing/img/logo.png
+files
+	build/FsTfServing.dll ==> lib/netstandard2.0
+	build/FsTfServing.xml ==> lib/netstandard2.0
+	build/FsTfServing.Grpc.dll ==> lib/netstandard2.0
+dependencies
+	Grpc >= 1.6.1
