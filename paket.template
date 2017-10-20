@@ -7,12 +7,12 @@ description
 tags
 	tensorflow serving fsharp
 projectUrl
-	http://www.github.com/Prolucid/FsTfServing
+	http://www.github.com/Prolucid/fs-tf-serving
 licenseUrl
-	http://prolucid.github.io/FsTfServing/LICENSE.html
+	http://prolucid.github.io/fs-tf-serving/LICENSE.html
 requireLicenseAcceptance false
 iconUrl
-	http://prolucid.github.io/FsTfServing/img/logo.png
+	http://prolucid.github.io/fs-tf-serving/img/logo.png
 files
 	build/FsTfServing.dll ==> lib/netstandard2.0
 	build/FsTfServing.xml ==> lib/netstandard2.0
